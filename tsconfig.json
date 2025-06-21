@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    /* Language and Env */
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Module Resolution */
+    "moduleResolution": "NodeNext",
+    "baseUrl": "./src",
+    "paths": {
+      "@config/*": ["config/*"],
+      "@controllers/*": ["controllers/*"],
+      "@middleware/*": ["middleware/*"],
+      "@routes/*": ["routes/*"],
+      "@src/*": ["*"]
+    },
+    // "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+
+    /* Emit */
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "declaration": true,
+
+    /* Interop */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": false, // Allows declared but unused local variables/imports
+    "noUnusedParameters": false, // Allows declared but unused function parameters
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Advanced Options */
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
