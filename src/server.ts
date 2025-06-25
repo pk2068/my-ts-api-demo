@@ -1,7 +1,8 @@
 // src/server.ts
-import express from "express";
-import apiRoutes from "./routes/apiRoutes.js"; // Using path alias
-import errorHandler from "./middleware/errorHandler.js"; // Using path alias
+import express from 'express';
+import apiRoutes from './routes/apiRoutes.js'; // Using path alias
+import errorHandler from './middleware/errorHandler.js'; // Using path alias
+import MyCustomError from './types/errors.js';
 
 const app = express();
 
@@ -9,15 +10,13 @@ const app = express();
 app.use(express.json());
 
 // Main API routes
-console.log("Setting up API routes...");
-app.use("/api/v1", apiRoutes);
+console.log('Setting up API routes...');
+app.use('/api/v1', apiRoutes);
 
 // Catch 404 Not Found errors
 app.use((req, res, next) => {
-  const error: any = new Error("Not Found");
-
-  error.statusCode = 404;
-  next(error);
+  const myErr = new MyCustomError('Not Found', 404, 'The requested resource was not found in server.ts');
+  next(myErr);
 });
 
 // Global error handling middleware (must be last)

@@ -1,8 +1,8 @@
 // src/index.ts
-import app from './server.js'; // Using path alias (or './server' if @src isn't preferred)
-import config from './config/env.js'; // Using path alias
+import app from "./server.js";
+import config from "./config/env.js";
 
-console.log('Starting server...');
+console.log("Starting server...");
 
 const PORT = config.PORT;
 
