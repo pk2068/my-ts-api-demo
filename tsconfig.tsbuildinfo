@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/server.ts","./src/config/env.ts","./src/controllers/appcontroller.ts","./src/middleware/errorhandler.ts","./src/routes/apiroutes.ts"],"version":"5.8.3"}
+{"root":["./src/index.ts","./src/server.ts","./src/config/env.ts","./src/controllers/appcontroller.ts","./src/middleware/errorhandler.ts","./src/routes/apiroutes.ts","./src/types/errors.ts"],"version":"5.8.3"}
